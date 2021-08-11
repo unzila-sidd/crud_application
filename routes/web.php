@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Route::get('/pizzas', function () {
     ];
     return view('pizzas', ['pizzas' => $pizzas]);
 });
+
+Route::get('/add-student',[StudentController::class,'addstudent'])->name('student.add');
+Route::post('/add-student',[StudentController::class,'savestudent'])->name('save.student');
