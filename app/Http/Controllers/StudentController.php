@@ -21,5 +21,11 @@ class StudentController extends Controller
         $students = DB::table('students')->get();
         return view('student-list',compact('students'));
     }
+    public function editstudent($id){
+       
+    }
+    public function delstudent($id){
+       
+    }
 
 }
