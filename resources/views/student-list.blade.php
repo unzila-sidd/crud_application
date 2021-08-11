@@ -32,17 +32,21 @@ th, td {
     </style>
 </head>
 <body>
+<a href="/add-student/">Add Student</a>
 <table style="width:100%">
   <tr>
     <th>ID</th>
     <th>Name</th>
     <th>Email</th> 
+    <th></th> 
   </tr>
   @foreach($students as $student)
   <tr>
     <td>{{ $student -> id}}</td>
     <td>{{ $student -> name}}</td>
     <td>{{ $student -> email}}</td>
+    <td><a href="/edit-student/{{ $student -> id}}">Edit</a></td>
+    <td><a href="/del-student/{{ $student -> id}}">Delete</a></td>
   </tr>
   @endforeach
   
