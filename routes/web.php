@@ -28,3 +28,4 @@ Route::get('/pizzas', function () {
 
 Route::get('/add-student',[StudentController::class,'addstudent'])->name('student.add');
 Route::post('/add-student',[StudentController::class,'savestudent'])->name('save.student');
+Route::get('/student-list',[StudentController::class,'studentslist'])->name('student.list');
